@@ -3,7 +3,7 @@ import {
   ChartBarStacked,
   Folders,
   House,
-  Phone,
+  Send,
   TextAlignJustify,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ const Header = () => {
     { id: 2, name: "About", path: "/about", icon: <BookUser /> },
     { id: 3, name: "Skills", path: "/skills", icon: <ChartBarStacked /> },
     { id: 4, name: "Projects", path: "/projects", icon: <Folders /> },
-    { id: 5, name: "Contact", path: "/contact", icon: <Phone /> },
+    { id: 5, name: "Contact", path: "/contact", icon: <Send /> },
   ];
 
   return (

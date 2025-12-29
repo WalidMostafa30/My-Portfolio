@@ -83,7 +83,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.73 0.17 260);
+  /* --primary: oklch(0.73 0.17 260); */
+  --primary: oklch(0.6 0.15 255);
   --primary-foreground: oklch(0.15 0.02 255);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -128,6 +129,10 @@
     @apply bg-background text-foreground;
   }
 
+  .pageContainer {
+    @apply container min-h-screen overflow-y-auto pt-16 pb-8 relative z-20;
+  }
+
   .navLink {
     @apply text-foreground/70 py-1 px-2 transition-all duration-300 ease-in-out;
 
@@ -150,5 +155,28 @@
     &.active {
       @apply text-primary bg-white font-semibold;
     }
+  }
+}
+
+.Home__profile-img-border {
+  background: var(--primary);
+  position: absolute;
+  width: calc(100%);
+  height: calc(100%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 53% 50% 40% 70% / 53% 51% 60% 42%;
+  animation: border-animation 10s linear infinite 1s;
+  filter: blur(20px);
+}
+@keyframes border-animation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
