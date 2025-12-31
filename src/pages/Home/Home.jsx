@@ -5,7 +5,7 @@ import { Folders, Send } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="h-screen flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
+    <div className="h-screen pt-16 pb-4 flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
       <div className="flex flex-col justify-center gap-2 text-center lg:text-start w-full max-w-xl">
         <p className="text-lg md:text-xl font-bold text-primary">Hi, I'm</p>
         <h1 className="text-4xl md:text-5xl font-bold">Walid Mostafa</h1>
