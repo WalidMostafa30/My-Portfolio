@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "./components/Header/Header";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Header />
 
       <Outlet />
+
+      <Toaster position="top-center"  className="bg-primary! text-white!" />
     </main>
   );
 }

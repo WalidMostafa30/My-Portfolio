@@ -18,7 +18,7 @@ const SettingsDropDown = () => {
           <Settings />
         </Button>
       </PopoverTrigger>
-      <PopoverContent placement="bottom-start" className="w-48">
+      <PopoverContent align="end" className="w-48">
         Place content for the popover here.
       </PopoverContent>
     </Popover>

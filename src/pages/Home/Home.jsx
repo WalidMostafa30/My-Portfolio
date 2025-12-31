@@ -30,14 +30,12 @@ const Home = () => {
       </div>
 
       <div className="lg:flex-1 flex justify-center items-center">
-        <div className="w-[250px] lg:w-[350px] aspect-square relative">
+        <div className="w-[250px] lg:w-[350px] rounded-full overflow-hidden aspect-square relative">
           <img
             src={ProfileImg}
             alt="Walid Mostafa"
-            className="w-full h-full rounded-full object-cover"
+            className="w-full h-full object-cover"
           />
-
-          <div className="Home__profile-img-border" />
         </div>
       </div>
     </section>

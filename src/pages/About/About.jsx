@@ -9,6 +9,30 @@ import { Calendar, Briefcase, GraduationCap, Award } from "lucide-react";
 import PageTitle from "@/components/common/PageTitle";
 
 const About = () => {
+  const aboutInfo = [
+    {
+      title: "Name",
+      info: "Walid Mostafa Elshazly",
+    },
+    {
+      title: "Age",
+      info: "23",
+    },
+    {
+      title: "Location",
+      info: "Egypt, Mansoura",
+    },
+    {
+      title: "Education",
+      info: "BACHELOR'S DEGREE IN COMPUTER SCIENCE.",
+      info2: "GRADUATION YEAR: 2022 - 2023",
+    },
+    {
+      title: "Summary",
+      info: "Experienced Frontend Developer specializing in building dynamic and responsive web applications with React and Next.js. Proficient in modern JavaScript (ES6+), TypeScript, and Redux Toolkit, ensuring scalable and maintainable solutions. Skilled in creating reusable components, optimizing performance, integrating RESTful APIs, and managing authentication flows. Dedicated to delivering user-friendly interfaces with a strong focus on UX/UI design principles and clean code practices.",
+    },
+  ];
+
   const timelineEvents = [
     {
       id: 1,
@@ -82,10 +106,7 @@ const About = () => {
                     }
                       `}
                   >
-                    <Card
-                      className="border-2 hover:border-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-2
-                    bg-accent-foreground/10 backdrop-blur-3xl"
-                    >
+                    <Card className="cardBG gap-2">
                       <CardHeader className="gap-1">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-5 h-5 text-primary" />
