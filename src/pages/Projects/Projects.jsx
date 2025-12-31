@@ -105,7 +105,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="pageContainer">
+    <div>
       <PageTitle title="Projects" subtitle="My projects" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -122,7 +122,10 @@ const Projects = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/60 backdrop-blur opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div
+                className="absolute inset-0 flex items-center justify-center gap-4 bg-black/60 backdrop-blur opacity-0 
+                transition-opacity duration-300 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
+              >
                 <Button className="rounded-full" variant="outline">
                   <Link
                     to={project.github}
@@ -156,7 +159,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

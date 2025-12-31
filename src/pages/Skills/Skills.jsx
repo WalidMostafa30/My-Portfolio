@@ -113,7 +113,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="pageContainer">
+    <div>
       <PageTitle
         title="Skills"
         subtitle="My technical abilities and expertise"
@@ -149,7 +149,7 @@ const Skills = () => {
           </Card>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

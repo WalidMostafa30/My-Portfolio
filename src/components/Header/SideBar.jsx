@@ -72,7 +72,7 @@ const SideBar = ({ navLinks, open, onClose }) => {
     <AnimatePresence>
       {open && (
         <motion.aside
-          className="fixed inset-0 z-9999 overflow-hidden"
+          className="fixed h-svh inset-0 z-9999 overflow-hidden"
           initial="hidden"
           animate="visible"
           exit="exit"

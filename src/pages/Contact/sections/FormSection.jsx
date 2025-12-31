@@ -95,80 +95,84 @@ const FormSection = () => {
   };
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={handleSubmit}
-      className="lg:col-span-2 space-y-4 cardBG hover:border-border p-4 rounded-lg"
-    >
-      {/* Name */}
-      <div>
-        <Label htmlFor="user_name" className="mb-2">
-          Name
-        </Label>
-        <Input
-          type="text"
-          name="user_name"
-          id="user_name"
-          placeholder="Your Name"
-          value={values.user_name}
-          onChange={handleChange}
-          className="bg-popover!"
-        />
-        {errors.user_name && (
-          <p className="text-sm text-red-400 mt-1">{errors.user_name}</p>
+    <div className="lg:col-span-2">
+      <h3 className="text-2xl font-bold mb-2">Contact Me</h3>
+
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="space-y-4 cardBG hover:border-border p-4 lg:p-6 rounded-lg"
+      >
+        {/* Name */}
+        <div>
+          <Label htmlFor="user_name" className="mb-2">
+            Name
+          </Label>
+          <Input
+            type="text"
+            name="user_name"
+            id="user_name"
+            placeholder="Your Name"
+            value={values.user_name}
+            onChange={handleChange}
+            className="bg-popover!"
+          />
+          {errors.user_name && (
+            <p className="text-sm text-red-400 mt-1">{errors.user_name}</p>
+          )}
+        </div>
+
+        {/* Email */}
+        <div>
+          <Label htmlFor="user_email" className="mb-2">
+            Email
+          </Label>
+          <Input
+            type="email"
+            name="user_email"
+            id="user_email"
+            placeholder="Your Email"
+            value={values.user_email}
+            onChange={handleChange}
+            className="bg-popover!"
+          />
+          {errors.user_email && (
+            <p className="text-sm text-red-400 mt-1">{errors.user_email}</p>
+          )}
+        </div>
+
+        {/* Message */}
+        <div>
+          <Label htmlFor="message" className="mb-2">
+            Message
+          </Label>
+          <Textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            rows={5}
+            value={values.message}
+            onChange={handleChange}
+            className="min-h-[100px] max-h-[200px] bg-popover!"
+          />
+          {errors.message && (
+            <p className="text-sm text-red-400 mt-1">{errors.message}</p>
+          )}
+        </div>
+
+        {/* Submit */}
+        <Button type="submit" disabled={isLoading} className="w-full lg:w-auto">
+          {isLoading ? "Sending..." : "Send Message"}
+          <Send className="ml-2" />
+        </Button>
+
+        {serverError && (
+          <p className="w-full text-sm text-center bg-red-100 text-red-500 border border-red-500 rounded-md p-2">
+            {serverError}
+          </p>
         )}
-      </div>
-
-      {/* Email */}
-      <div>
-        <Label htmlFor="user_email" className="mb-2">
-          Email
-        </Label>
-        <Input
-          type="email"
-          name="user_email"
-          id="user_email"
-          placeholder="Your Email"
-          value={values.user_email}
-          onChange={handleChange}
-          className="bg-popover!"
-        />
-        {errors.user_email && (
-          <p className="text-sm text-red-400 mt-1">{errors.user_email}</p>
-        )}
-      </div>
-
-      {/* Message */}
-      <div>
-        <Label htmlFor="message" className="mb-2">
-          Message
-        </Label>
-        <Textarea
-          name="message"
-          id="message"
-          placeholder="Your Message"
-          rows={5}
-          value={values.message}
-          onChange={handleChange}
-          className="min-h-[100px] max-h-[200px] bg-popover!"
-        />
-        {errors.message && (
-          <p className="text-sm text-red-400 mt-1">{errors.message}</p>
-        )}
-      </div>
-
-      {/* Submit */}
-      <Button type="submit" disabled={isLoading} className="w-full lg:w-auto">
-        {isLoading ? "Sending..." : "Send Message"}
-        <Send className="ml-2" />
-      </Button>
-
-      {serverError && (
-        <p className="w-full text-sm text-center bg-red-100 text-red-500 border border-red-500 rounded-md p-2">
-          {serverError}
-        </p>
-      )}
-    </form>
+      </form>
+    </div>
   );
 };
 

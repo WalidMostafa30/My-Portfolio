@@ -79,7 +79,7 @@ const About = () => {
   ];
 
   return (
-    <section className="pageContainer">
+    <div>
       <PageTitle title="About Me" subtitle="Learn more about me" />
 
       <div className="relative max-w-6xl mx-auto">
@@ -142,7 +142,7 @@ const About = () => {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

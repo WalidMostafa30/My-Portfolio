@@ -5,6 +5,7 @@ import {
   Facebook,
   Instagram,
   MessageCircle,
+  Phone,
 } from "lucide-react";
 
 const ContactInfoSection = () => {
@@ -47,25 +48,35 @@ const ContactInfoSection = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4">
-      {contactInfoList.map((info) => (
-        <Link
-          to={info.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cardBG flex items-center gap-2 rounded-lg py-2 px-4"
-          key={info.id}
-        >
-          <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary text-white">
-            {info.icon}
-          </span>
+    <div>
+      <h3 className="text-2xl font-bold mb-2">Contact Information</h3>
 
-          <div className="flex-1 flex flex-col">
-            <h4 className="font-bold">{info.head}</h4>
-            <p className="text-sm text-wrap break-all">{info.info}</p>
-          </div>
-        </Link>
-      ))}
+      <div className="flex flex-col gap-4">
+        {contactInfoList.map((info) => (
+          <Link
+            to={info.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cardBG flex items-center gap-2 rounded-lg py-2 px-4"
+            key={info.id}
+          >
+            <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary text-white relative">
+              {info.icon}
+
+              {info.head === "Whatsapp" && (
+                <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <Phone size={10}/>
+                </span>
+              )}
+            </span>
+
+            <div className="flex-1 flex flex-col">
+              <h4 className="font-bold">{info.head}</h4>
+              <p className="text-sm text-wrap break-all">{info.info}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
