@@ -79,9 +79,8 @@ const About = () => {
   ];
 
   return (
-    <div>
+    <div className="pageContainer">
       <PageTitle title="About Me" subtitle="Learn more about me" />
-
       <div className="relative max-w-6xl mx-auto">
         {/* Vertical Line */}
         <div className="absolute start-6 md:start-1/2 md:-translate-x-1/2 rtl:md:translate-x-1/2 h-full w-1 bg-linear-to-b from-primary via-background/50 to-background rounded-full" />

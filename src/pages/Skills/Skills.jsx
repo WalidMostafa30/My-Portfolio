@@ -113,12 +113,11 @@ const Skills = () => {
   ];
 
   return (
-    <div>
+    <div className="pageContainer">
       <PageTitle
         title="Skills"
         subtitle="My technical abilities and expertise"
       />
-
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
         {skillsCategories.map((category) => (
           <Card className="cardBG" key={category.id}>

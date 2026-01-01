@@ -130,7 +130,7 @@
   }
 
   .pageContainer {
-    @apply container h-screen overflow-y-auto pt-16 pb-8 relative z-20;
+    @apply flex-1 pb-8 container h-svh;
   }
 
   .cardBG {
@@ -161,26 +161,3 @@
     }
   }
 }
-
-/* .Home__profile-img-border {
-  background: var(--primary);
-  position: absolute;
-  width: calc(100%);
-  height: calc(100%);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  border-radius: 53% 50% 40% 70% / 53% 51% 60% 42%;
-  animation: border-animation 10s linear infinite 1s;
-  filter: blur(20px);
-}
-@keyframes border-animation {
-  0% {
-    transform: translate(-50%, -50%) rotate(0);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-} */
