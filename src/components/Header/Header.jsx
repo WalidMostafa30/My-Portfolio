@@ -29,7 +29,7 @@ const Header = () => {
     <>
       <header className="py-2 fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-3xl">
         <div className="container flex justify-between items-center gap-2">
-          <Link to={"/"} className="text-2xl font-bold">
+          <Link to={"/"} className="text-3xl font-bold hover:text-primary hover:scale-110 transition-all duration-300">
             Walid
           </Link>
 
@@ -41,7 +41,7 @@ const Header = () => {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full cursor-pointer sm:hidden"
+              className="rounded-full cursor-pointer md:hidden"
               onClick={() => setOpenSidebar(true)}
             >
               <TextAlignJustify />

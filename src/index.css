@@ -77,16 +77,16 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0% 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   /* --primary: oklch(0.73 0.17 260); */
-  --primary: oklch(0.6 0.15 255);
+  --primary: oklch(49.674% 0.15494 11.039);
   /* --primary-foreground: oklch(0.15 0.02 255); */
-  --primary-foreground: oklch(29.558% 0.04375 251.938);
+  --primary-foreground: oklch(37.989% 0.08943 10.318);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -116,6 +116,7 @@
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
+  max-width: 1120px;
 }
 
 /* fix hover in mobile */

@@ -12,14 +12,14 @@ function App() {
       <Toaster position="top-center" className="bg-primary! text-white!" />
 
       {/* background gradient shadow */}
-      <div className="backdrop-blur-3xl fixed inset-0">
+      {/* <div className="backdrop-blur-3xl fixed inset-0">
         <div
-          className="absolute w-[700px] h-[700px] bg-primary opacity-20 top-1/3 right-0 blur-3xl animate-spin animation-duration-[20s]"
+          className="absolute w-[900px] h-[900px] bg-primary/30 top-1/3 left-1/2  blur-3xl animate-spin animation-duration-[20s]"
           style={{
             borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
           }}
         />
-      </div>
+      </div> */}
     </main>
   );
 }
