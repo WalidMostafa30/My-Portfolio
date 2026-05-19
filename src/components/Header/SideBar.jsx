@@ -2,6 +2,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const overlayVariants = {
   hidden: {
@@ -61,8 +62,21 @@ const SideBar = ({ navLinks, open, onClose }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+
   const handleLinkClick = (path) => {
     onClose();
+
     setTimeout(() => {
       navigate(path);
     }, 600);
@@ -98,6 +112,7 @@ const SideBar = ({ navLinks, open, onClose }) => {
             <motion.nav variants={containerVariants} className="space-y-2">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
+
                 return (
                   <motion.div
                     key={link.id}
@@ -108,6 +123,7 @@ const SideBar = ({ navLinks, open, onClose }) => {
                     <motion.span variants={iconVariants}>
                       {link.icon}
                     </motion.span>
+
                     <motion.p variants={textVariants}>{link.name}</motion.p>
                   </motion.div>
                 );

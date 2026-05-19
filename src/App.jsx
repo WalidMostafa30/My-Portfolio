@@ -4,19 +4,22 @@ import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
-    <main
-      className="backdrop-blur-3xl"
-      style={{
-        background: `radial-gradient(circle at bottom right, var(--primary) -50%, var(--background) 60%)`,
-      }}
-    >
+    <main>
       <Header />
 
-      <section className="container h-svh flex flex-col overflow-y-auto pt-16 relative z-20">
-        <Outlet />
-      </section>
+      <Outlet />
 
       <Toaster position="top-center" className="bg-primary! text-white!" />
+
+      {/* background gradient shadow */}
+      <div className="backdrop-blur-3xl fixed inset-0">
+        <div
+          className="absolute w-[700px] h-[700px] bg-primary opacity-20 top-1/3 right-0 blur-3xl animate-spin animation-duration-[20s]"
+          style={{
+            borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+          }}
+        />
+      </div>
     </main>
   );
 }
