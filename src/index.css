@@ -112,11 +112,28 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* custom container */
+/* container */
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
-  max-width: 1120px;
+
+  width: 100%;
+
+  @media (width >= 576px) {
+    max-width: 540px;
+  }
+  @media (width >= 768px) {
+    max-width: 720px;
+  }
+  @media (width >= 992px) {
+    max-width: 960px;
+  }
+  @media (width >= 1200px) {
+    max-width: 1140px;
+  }
+  /* @media (width >= 1400px) {
+    max-width: 1320px;
+  } */
 }
 
 /* fix hover in mobile */
@@ -135,8 +152,22 @@
     @apply flex-1 container pt-16 pb-8 relative z-20;
   }
 
-  .cardBG {
-    @apply bg-accent-foreground/10! backdrop-blur-3xl! border-2! hover:border-primary hover:shadow-xl transition-all duration-300 ease-in-out;
+  .card_bg {
+    @apply overflow-hidden rounded-4xl p-8 bg-gray-50/3 backdrop-blur-3xl relative border-2;
+  }
+
+  .blur_circle {
+    @apply absolute -z-10 aspect-square blur-2xl animate-spin;
+
+    animation-duration: 10s;
+
+    background: radial-gradient(
+      circle,
+      var(--foreground) 0%,
+      var(--primary) 20%
+    );
+
+    border-radius: 37% 63% 34% 66% / 61% 29% 71% 39%;
   }
 
   .navLink {

@@ -11,10 +11,16 @@ import ticTacToeImg from "@/assets/images/projectsImgs/tic-tac-toe.webp";
 import calculatorImg from "@/assets/images/projectsImgs/calculator.webp";
 import memoryGameImg from "@/assets/images/projectsImgs/memoryGame.webp";
 
-import { Link } from "react-router";
 import PageTitle from "@/components/common/PageTitle";
-import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { MoveRight } from "lucide-react";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+// Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Projects = () => {
   const ProjectsData = [
@@ -105,61 +111,66 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pageContainer">
+    <section className="pageContainer h-dvh">
       <PageTitle title="Projects" subtitle="My projects" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {ProjectsData.map((project) => (
-          <div
-            key={project.id}
-            className="cardBG group overflow-hidden rounded-xl p-0"
-          >
-            <div className="relative h-52 overflow-hidden">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={24}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+        }}
+        className="pb-14!"
+      >
+        {ProjectsData.map((project, index) => (
+          <SwiperSlide key={project.id}>
+            <div className="card_bg group flex flex-col gap-4 h-full">
+              <div className="blur_circle w-[60%] bottom-1/2 end-1/2 group-hover:scale-150 transition-all duration-300" />
 
-              {/* Overlay */}
-              <div
-                className="absolute inset-0 flex items-center justify-center gap-4 bg-black/60 backdrop-blur opacity-0 
-                transition-opacity duration-300 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
-              >
-                <Button className="rounded-full" variant="outline">
-                  <Link
-                    to={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <Github size={16} />
-                    GitHub
-                  </Link>
-                </Button>
-                <Button className="rounded-full">
-                  <Link
-                    to={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <ExternalLink size={16} />
-                    Demo
-                  </Link>
-                </Button>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-6xl font-extrabold">
+                  {index + 1 < 10 ? `0${index + 1}` : `${index + 1}`}
+                </span>
+
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full flex items-center justify-center border border-white hover:-rotate-45 transition-all duration-300"
+                >
+                  <MoveRight />
+                </a>
+              </div>
+
+              <h3 className="text-2xl font-semibold">{project.title}</h3>
+
+              <div className="w-full h-52 overflow-hidden rounded-3xl bg-background">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
-
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-center">
-                {project.title}
-              </h3>
-            </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
-    </div>
+      </Swiper>
+    </section>
   );
 };
 

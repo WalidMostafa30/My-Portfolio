@@ -103,14 +103,7 @@ const Home = () => {
           className="w-full h-full object-contain object-bottom"
         />
 
-        <div
-          className="absolute -z-10 w-[60%] md:w-[55%] aspect-square bottom-10 left-1/2 -translate-x-1/2 blur-2xl animate-spin animation-duration-[10s]"
-          style={{
-            borderRadius: "37% 63% 34% 66% / 61% 29% 71% 39%",
-            background:
-              "radial-gradient(circle,var(--foreground) 0%, var(--primary) 20%)",
-          }}
-        />
+        <div className="blur_circle w-[60%] bottom-10 left-1/2 -translate-x-1/2" />
       </div>
 
       <div
