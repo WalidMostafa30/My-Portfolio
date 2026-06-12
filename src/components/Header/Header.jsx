@@ -12,7 +12,7 @@ import { useState } from "react";
 
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
-import SettingsDropDown from "./SettingsDropDown";
+import ThemeBtn from "./ThemeBtn";
 
 const Header = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -29,14 +29,17 @@ const Header = () => {
     <>
       <header className="py-2 fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-3xl">
         <div className="container flex justify-between items-center gap-2">
-          <Link to={"/"} className="text-3xl font-bold hover:text-primary hover:scale-110 transition-all duration-300">
+          <Link
+            to={"/"}
+            className="text-3xl font-bold hover:text-primary hover:scale-110 transition-all duration-300"
+          >
             Walid
           </Link>
 
           <NavBar navLinks={navLinks} />
 
           <div className="flex items-center gap-4">
-            <SettingsDropDown />
+            <ThemeBtn />
 
             <Button
               variant="outline"

@@ -95,13 +95,13 @@ const FormSection = () => {
   };
 
   return (
-    <div className="lg:col-span-2">
-      <h3 className="text-2xl font-bold mb-2">Contact Me</h3>
+    <div className="md:col-span-2">
+      <h3 className="text-2xl font-bold mb-4">Contact Me</h3>
 
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="space-y-4 cardBG hover:border-border p-4 lg:p-6 rounded-lg"
+        className="space-y-4"
       >
         {/* Name */}
         <div>

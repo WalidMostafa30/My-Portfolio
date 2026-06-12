@@ -1,151 +1,52 @@
+import { skillsCategories } from "@/assets/data";
 import PageTitle from "@/components/common/PageTitle";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const Skills = () => {
-  const skillsCategories = [
-    {
-      id: 1,
-      title: "Languages",
-      skills: [
-        {
-          id: 1,
-          name: "HTML",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        },
-        {
-          id: 2,
-          name: "CSS",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        },
-        {
-          id: 3,
-          name: "JavaScript",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        },
-        {
-          id: 4,
-          name: "TypeScript",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "Frameworks & Libraries",
-      skills: [
-        {
-          id: 5,
-          name: "React",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          id: 6,
-          name: "Next JS",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-        },
-        {
-          id: 7,
-          name: "Redux Toolkit",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-        },
-        {
-          id: 8,
-          name: "Framer Motion",
-          image:
-            "https://framerusercontent.com/images/8Y1K4N6W6VDDT4KXGZ6YQPUF6A.png",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Styling",
-      skills: [
-        {
-          id: 9,
-          name: "Bootstrap",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-        },
-        {
-          id: 10,
-          name: "Tailwind",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-        },
-        {
-          id: 11,
-          name: "Sass",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Tools & Others",
-      skills: [
-        {
-          id: 12,
-          name: "Git",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        },
-        {
-          id: 13,
-          name: "GitHub",
-          image:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        },
-        {
-          id: 14,
-          name: "Responsive Design",
-          image: "https://cdn-icons-png.flaticon.com/512/1006/1006554.png",
-        },
-      ],
-    },
-  ];
-
   return (
     <div className="pageContainer">
+      {/* عنوان الصفحة الرئيسي */}
       <PageTitle
         title="Skills"
         subtitle="My technical abilities and expertise"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
+
+      {/* حاوي الصفوف الرئيسي */}
+      <div className="space-y-12">
         {skillsCategories.map((category) => (
-          <Card className="cardBG" key={category.id}>
-            <CardHeader className="gap-0 text-xl border-b">
-              {category.title}
-            </CardHeader>
+          <div
+            key={category.id}
+            className="grid grid-cols-1 md:grid-cols-4 gap-4 items-start pb-8 border-b border-gray-100 dark:border-neutral-800 last:border-0"
+          >
+            {/* جهة اليسار: عنوان التصنيف مع مؤشر ملون */}
+            <div className="md:col-span-1 flex items-center gap-3 pt-1">
+              <span className={`w-2 h-2 rounded-full bg-primary`} />
+              <h3 className="flex-1 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                {category.title}
+              </h3>
+            </div>
 
-            <CardContent className="grid grid-cols-2 gap-4">
+            {/* جهة اليمين: المهارات مرصوصة بشكل Badges مرنة */}
+            <div className="md:col-span-3 flex flex-wrap gap-3">
               {category.skills.map((skill) => (
-                <Card
+                <div
                   key={skill.id}
-                  className="group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-center gap-2.5 px-4 py-2 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 rounded-full shadow-2xs hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200 group cursor-default"
                 >
-                  <CardContent className="flex flex-col items-center gap-4">
-                    <img
-                      src={skill.image}
-                      alt={skill.name}
-                      className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-110"
-                    />
-
-                    <span className="text-sm font-semibold text-center">
-                      {skill.name}
-                    </span>
-                  </CardContent>
-                </Card>
+                  {/* أيقونة المهارة */}
+                  <img
+                    src={skill.image}
+                    alt={`${skill.name} icon`}
+                    className="w-5 h-5 object-contain group-hover:scale-110 transition-transform duration-150"
+                    loading="lazy"
+                  />
+                  {/* اسم المهارة */}
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                    {skill.name}
+                  </span>
+                </div>
               ))}
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>

@@ -1,55 +1,10 @@
+import { contactInfoList } from "@/assets/data";
 import { Link } from "react-router";
-import {
-  Mail,
-  Linkedin,
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
 
 const ContactInfoSection = () => {
-  const contactInfoList = [
-    {
-      id: 1,
-      head: "E-mail",
-      info: "walidmoustafa436@gmail.com",
-      link: "mailto:walidmoustafa436@gmail.com",
-      icon: <Mail />,
-    },
-    {
-      id: 2,
-      head: "Whatsapp",
-      info: "0106 525 4159",
-      link: "https://wa.me/201065254159",
-      icon: <MessageCircle />,
-    },
-    {
-      id: 3,
-      head: "LinkedIn",
-      info: "Walid Mostafa",
-      link: "https://www.linkedin.com/in/walid-m0stafa-",
-      icon: <Linkedin />,
-    },
-    {
-      id: 4,
-      head: "Facebook",
-      info: "Walid Mostafa",
-      link: "https://www.facebook.com/profile.php?id=100011538554307&mibextid=ZbWKwL",
-      icon: <Facebook />,
-    },
-    {
-      id: 5,
-      head: "Instagram",
-      info: "walid_mostafa30",
-      link: "https://www.instagram.com/walid_mostafa30/profilecard/?igsh=MWNnNmZucDE4bjc1MA==",
-      icon: <Instagram />,
-    },
-  ];
-
   return (
     <div>
-      <h3 className="text-2xl font-bold mb-2">Contact Information</h3>
+      <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
 
       <div className="flex flex-col gap-4">
         {contactInfoList.map((info) => (
@@ -57,15 +12,18 @@ const ContactInfoSection = () => {
             to={info.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="cardBG flex items-center gap-2 rounded-lg py-2 px-4"
+            className="cardBG flex items-center gap-2 rounded-lg group"
             key={info.id}
           >
-            <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary text-white relative">
-              {info.icon}
+            <span
+              className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary text-white relative
+              group-hover:rotate-10 group-hover:scale-110 transition-all duration-300"
+            >
+              <info.icon />
 
-              {info.head === "Whatsapp" && (
+              {info.icon2 && (
                 <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <Phone size={10}/>
+                  <info.icon2 size={12} />
                 </span>
               )}
             </span>

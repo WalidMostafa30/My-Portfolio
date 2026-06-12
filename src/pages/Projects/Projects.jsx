@@ -1,18 +1,5 @@
-import myPortfolioImg from "@/assets/images/projectsImgs/portfolio.webp";
-import MiniStoreImg from "@/assets/images/projectsImgs/ecom.webp";
-import GuessGameImg from "@/assets/images/projectsImgs/guess-game.webp";
-import QuranImg from "@/assets/images/projectsImgs/quran-app.webp";
-import todoListimg from "@/assets/images/projectsImgs/todo-list.webp";
-import weatherimg from "@/assets/images/projectsImgs/weather-app.webp";
-import quizimg from "@/assets/images/projectsImgs/quiz-app.webp";
-import DragTodoImg from "@/assets/images/projectsImgs/drag-drop-todo.webp";
-import ageCalculatorImg from "@/assets/images/projectsImgs/age-calculator.webp";
-import ticTacToeImg from "@/assets/images/projectsImgs/tic-tac-toe.webp";
-import calculatorImg from "@/assets/images/projectsImgs/calculator.webp";
-import memoryGameImg from "@/assets/images/projectsImgs/memoryGame.webp";
-
 import PageTitle from "@/components/common/PageTitle";
-import { MoveRight } from "lucide-react";
+import { MoveRight, Layers } from "lucide-react";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,155 +8,90 @@ import { Pagination, Autoplay } from "swiper/modules";
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { ProjectsData } from "@/assets/data";
 
 const Projects = () => {
-  const ProjectsData = [
-    {
-      id: 1,
-      title: "My Portfolio",
-      img: myPortfolioImg,
-      github: "https://github.com/WalidMostafa30/Walid-Portfolio",
-      demo: "https://walid-portfolio-2001.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "E-commerce",
-      img: MiniStoreImg,
-      github: "https://github.com/WalidMostafa30/E-commerce-jsonserver",
-      demo: "https://ecommerce-ministore.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "Quran App",
-      img: QuranImg,
-      github: "https://github.com/WalidMostafa30/Quran-App",
-      demo: "https://al-mostafa-app.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "Todo List",
-      img: todoListimg,
-      github: "https://github.com/WalidMostafa30/Todo-List",
-      demo: "https://todo-list-2o01.netlify.app/",
-    },
-    {
-      id: 5,
-      title: "Weather App",
-      img: weatherimg,
-      github: "https://github.com/WalidMostafa30/Weather-App",
-      demo: "https://weather-app-2o24.netlify.app/",
-    },
-    {
-      id: 6,
-      title: "Draggable To-DO",
-      img: DragTodoImg,
-      github: "https://github.com/WalidMostafa30/Drag_Drop_Todo",
-      demo: "https://drag-drop-todo-2001.netlify.app/",
-    },
-    {
-      id: 7,
-      title: "Quiz App",
-      img: quizimg,
-      github: "https://github.com/WalidMostafa30/Quiz-App",
-      demo: "https://quiz-app-1022.netlify.app/",
-    },
-    {
-      id: 8,
-      title: "Tic-Tac-Toe",
-      img: ticTacToeImg,
-      github: "https://github.com/WalidMostafa30/tic-tac-toe",
-      demo: "https://walidmostafa30.github.io/tic-tac-toe/",
-    },
-    {
-      id: 9,
-      title: "Guess Game",
-      img: GuessGameImg,
-      github: "https://github.com/WalidMostafa30/Guess-Game",
-      demo: "https://walidmostafa30.github.io/Guess-Game/",
-    },
-    {
-      id: 10,
-      title: "Age Calculator",
-      img: ageCalculatorImg,
-      github: "https://github.com/WalidMostafa30/Age-calculation",
-      demo: "https://walidmostafa30.github.io/Age-calculation/",
-    },
-    {
-      id: 11,
-      title: "Calculator",
-      img: calculatorImg,
-      github: "https://github.com/WalidMostafa30/Calculator",
-      demo: "https://walidmostafa30.github.io/Calculator/",
-    },
-    {
-      id: 12,
-      title: "Memory Game",
-      img: memoryGameImg,
-      github: "https://github.com/WalidMostafa30/Memory-game",
-      demo: "https://walidmostafa30.github.io/Memory-game/",
-    },
-  ];
-
   return (
-    <section className="pageContainer h-dvh">
-      <PageTitle title="Projects" subtitle="My projects" />
+    <section className="pageContainer">
+      <PageTitle title="Projects" subtitle="My creative portfolio & works" />
 
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={24}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-        }}
-        className="pb-14!"
-      >
-        {ProjectsData.map((project, index) => (
-          <SwiperSlide key={project.id}>
-            <div className="card_bg group flex flex-col gap-4 h-full">
-              <div className="blur_circle w-[60%] bottom-1/2 end-1/2 group-hover:scale-150 transition-all duration-300" />
+      <div className="w-full">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={28}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: true,
+          }}
+          loop
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 },
+          }}
+          className="pb-10! project-swiper [&_.swiper-pagination-bullet]:rounded-full! [&_.swiper-pagination-bullet]:duration-300! [&_.swiper-pagination-bullet]:w-3! [&_.swiper-pagination-bullet]:h-3! [&_.swiper-pagination-bullet]:bg-foreground! [&_.swiper-pagination-bullet]:opacity-60 
+          [&_.swiper-pagination-bullet-active]:bg-primary! [&_.swiper-pagination-bullet-active]:w-6! [&_.swiper-pagination-bullet-active]:h-5 [&_.swiper-pagination-bullet-active]:opacity-100! [&_.swiper-pagination-bullet-active]:opacity-100!"
+        >
+          {ProjectsData.map((project, index) => (
+            <SwiperSlide key={project.id} className="h-auto py-2">
+              <div className="backdrop-blur-3xl group flex flex-col justify-between gap-5 p-6 rounded-3xl bg-white dark:bg-neutral-900 border-2 border-gray-150 dark:border-neutral-800/70 shadow-primary/20 shadow-xs relative overflow-hidden h-full transition-all duration-300 hover:border-primary/30! hover:shadow-md">
+                <div className="blur_circle w-[60%] h-[60%] absolute bottom-1/2 end-1/2 bg-primary/10 blur-3xl rounded-full pointer-events-none group-hover:scale-150 group-hover:bg-primary/10 transition-all duration-500" />
 
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-6xl font-extrabold">
-                  {index + 1 < 10 ? `0${index + 1}` : `${index + 1}`}
-                </span>
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-6xl font-bold font-mono text-white tracking-tighter">
+                      {index + 1 < 10 ? `0${index + 1}` : `${index + 1}`}
+                    </span>
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full flex items-center justify-center border border-white hover:-rotate-45 transition-all duration-300"
-                >
-                  <MoveRight />
-                </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-11 h-11 rounded-full flex items-center justify-center border-2 border-foreground hover:text-white hover:bg-primary hover:border-primary hover:-rotate-45 transition-all duration-300 shadow-2xs"
+                    >
+                      <MoveRight className="w-5 h-5" />
+                    </a>
+                  </div>
+
+                  <div className="w-full h-48 overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-950 border border-gray-100 dark:border-neutral-850 relative">
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="h-full w-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors duration-200">
+                    {project.title}
+                  </h3>
+                </div>
+
+                <div className="relative z-10 pt-3 border-t border-gray-100 dark:border-neutral-800/80 flex items-center gap-2 overflow-hidden">
+                  <Layers className="w-4 h-4 text-myGreen shrink-0" />
+                  <div className="flex flex-wrap gap-1.5 overflow-hidden max-h-6">
+                    {project.tags ? (
+                      project.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-[11px] font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-neutral-800 px-2 py-0.5 rounded-md"
+                        >
+                          {tag}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-[11px] font-medium text-myGreen bg-myGreen/10 px-2.5 py-0.5 rounded-md">
+                        Interactive Web App
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
-
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
-
-              <div className="w-full h-52 overflow-hidden rounded-3xl bg-background">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };
