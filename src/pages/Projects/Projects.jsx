@@ -30,7 +30,7 @@ const Projects = () => {
             768: { slidesPerView: 2 },
             1200: { slidesPerView: 3 },
           }}
-          className="pb-10! project-swiper [&_.swiper-pagination-bullet]:rounded-full! [&_.swiper-pagination-bullet]:duration-300! [&_.swiper-pagination-bullet]:w-3! [&_.swiper-pagination-bullet]:h-3! [&_.swiper-pagination-bullet]:bg-foreground! [&_.swiper-pagination-bullet]:opacity-60 
+          className="pb-16! md:pb-10! project-swiper [&_.swiper-pagination-bullet]:rounded-full! [&_.swiper-pagination-bullet]:duration-300! [&_.swiper-pagination-bullet]:w-3! [&_.swiper-pagination-bullet]:h-3! [&_.swiper-pagination-bullet]:bg-foreground! [&_.swiper-pagination-bullet]:opacity-60 
           [&_.swiper-pagination-bullet-active]:bg-primary! [&_.swiper-pagination-bullet-active]:w-6! [&_.swiper-pagination-bullet-active]:h-5 [&_.swiper-pagination-bullet-active]:opacity-100! [&_.swiper-pagination-bullet-active]:opacity-100!"
         >
           {ProjectsData.map((project, index) => (

@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const overlayVariants = {
   hidden: {
@@ -61,6 +61,19 @@ const textVariants = {
 const SideBar = ({ navLinks, open, onClose }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const closeBtnRef = useRef(null);
+  const [circlePos, setCirclePos] = useState({ top: 0, left: 0 });
+
+  useLayoutEffect(() => {
+    if (open && closeBtnRef.current) {
+      const rect = closeBtnRef.current.getBoundingClientRect();
+
+      setCirclePos({
+        top: rect.top + rect.height / 2,
+        left: rect.left + rect.width / 2,
+      });
+    }
+  }, [open]);
 
   useEffect(() => {
     if (open) {
@@ -93,19 +106,28 @@ const SideBar = ({ navLinks, open, onClose }) => {
         >
           {/* Overlay circle */}
           <motion.div
-            className="absolute top-2 right-4 w-8 h-8 rounded-full bg-primary"
+            className="absolute rounded-full bg-primary"
+            style={{
+              width: 32,
+              height: 32,
+              top: circlePos.top - 16,
+              left: circlePos.left - 16,
+            }}
             variants={overlayVariants}
           />
 
           {/* Close button */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full cursor-pointer absolute top-2 right-4 z-20"
-            onClick={onClose}
-          >
-            <X />
-          </Button>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-20 container flex justify-end py-2">
+            <Button
+              ref={closeBtnRef}
+              variant="outline"
+              size="icon"
+              className="rounded-full cursor-pointer"
+              onClick={onClose}
+            >
+              <X />
+            </Button>
+          </div>
 
           {/* Nav links */}
           <div className="relative z-10 w-full h-full flex flex-col items-center justify-center gap-2">

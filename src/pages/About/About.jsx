@@ -33,7 +33,7 @@ const About = () => {
               key={index}
               className="flex items-center gap-4 p-5 bg-gray-50/60 dark:bg-neutral-900/50 rounded-xl border border-gray-100 dark:border-neutral-800/80 hover:bg-white dark:hover:bg-neutral-900 hover:shadow-xs transition-all duration-200 group"
             >
-              <div className="w-11 h-11 rounded-xl bg-white dark:bg-neutral-800 flex items-center justify-center shadow-xs border border-gray-150 dark:border-neutral-700/50 group-hover:scale-105 transition-transform duration-200">
+              <div className="w-11 h-11 rounded-xl text-primary bg-white dark:bg-neutral-800 flex items-center justify-center shadow-xs border border-gray-150 dark:border-neutral-700/50 group-hover:scale-105 transition-transform duration-200">
                 {item.icon}
               </div>
               <div>
@@ -55,8 +55,8 @@ const About = () => {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-myBlue via-myPurple to-myGreen" />
 
             <div className="flex items-center gap-2 mb-4">
-              <FileText className="w-5 h-5 text-myBlue" />
-              <h3 className="text-sm font-bold uppercase tracking-widest text-myBlue">
+              <FileText className="w-5 h-5 text-primary" />
+              <h3 className="text-sm font-bold uppercase tracking-widest">
                 Professional Summary
               </h3>
             </div>
@@ -79,11 +79,11 @@ const About = () => {
           {/* كارت التعليم الداكن */}
           <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 text-white p-6 rounded-2xl flex flex-col justify-between border border-neutral-800 shadow-lg relative overflow-hidden">
             <div className="flex justify-between items-start">
-              <span className="text-xs font-mono text-myGreen bg-myGreen/10 px-2.5 py-1 rounded-md border border-myGreen/20">
+              <span className="text-xs font-mono px-2.5 py-1 rounded-md border border-myGreen/20">
                 Education
               </span>
               <div className="p-2 bg-neutral-800 rounded-lg text-gray-300">
-                <GraduationCap className="w-5 h-5 text-myGreen" />
+                <GraduationCap className="w-5 h-5 text-primary" />
               </div>
             </div>
 

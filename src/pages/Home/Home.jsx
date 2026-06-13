@@ -1,30 +1,105 @@
 import { contactInfoList } from "@/assets/data";
-import ProfileImg from "../../assets/Images/man.png";
+import ProfileImg from "../../assets/Images/home-img.png";
 import { FileText } from "lucide-react";
+import CV from "../../assets/CV/Walid-Frontend Developer.pdf";
+import { motion } from "framer-motion";
 
 const Home = () => {
+  // تفكيك الكلمات إلى مصفوفات من الحروف
+  const firstName = "Walid".split("");
+  const lastName = "Mostafa".split("");
+  const frontendText = "Frontend".split("");
+  const developerText = "Developer".split("");
+
+  // إعدادات أنيميشن الحروف (الـ Spring الانسيابي)
+  const letterVariants = {
+    initial: { y: "110%", opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 90,
+        mass: 0.4,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 4, // يتكرر كل 4 ثوانٍ
+      },
+    },
+  };
+
+  // تتابع ظهور الحروف (Stagger)
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.06,
+      },
+    },
+  };
+
   return (
     <section className="pageContainer h-dvh max-h-[1000px] pb-0 flex flex-col justify-end items-center overflow-hidden">
-      <div className="absolute top-1/7 lg:top-1/4 start-4">
-        <p className="text-lg lg:text-xl font-bold text-primary">Hello, I'm</p>
-        <h2 className="text-5xl font-bold uppercase">
-          Walid <br /> Mostafa
+      {/* 1. أنيميشن الاسم (Walid Mostafa) */}
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        className="absolute top-1/7 lg:top-1/4 start-4 select-none"
+      >
+        <p className="text-lg lg:text-xl font-bold text-primary mb-1">
+          Hello, I'm
+        </p>
+        <h2 className="text-5xl font-bold uppercase leading-none">
+          Walid <br />
+          Mostafa
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="absolute z-10 bottom-12 top-auto lg:bottom-auto lg:top-1/4 end-1/2 lg:end-4 translate-x-1/2 lg:translate-x-0">
+      {/* 2. أنيميشن الوظيفة (Frontend Developer) */}
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        className="absolute z-10 bottom-12 top-auto lg:bottom-auto lg:top-1/4 end-1/2 lg:end-4 translate-x-1/2 lg:translate-x-0 select-none"
+      >
         <p className="text-lg lg:text-xl font-bold text-primary">Creative</p>
-        <h2 className="text-5xl font-bold text-primary uppercase">Frontend</h2>
-        <h2
+
+        <div
+          className="absolute bottom-1/5 w-full h-1 z-10"
           style={{
             boxShadow: "0px -12px 11px 8px var(--background)",
           }}
-          className="text-5xl font-bold mt-1 relative z-10 uppercase leading-0"
-        >
-          Developer
-        </h2>
-      </div>
+        ></div>
 
+        {/* كلمة Frontend */}
+        <h2 className="text-5xl font-bold text-primary uppercase flex overflow-hidden leading-none">
+          {frontendText.map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </h2>
+
+        {/* كلمة Developer مع الحفاظ على الـ Shadow الخاص بك */}
+        <h2 className="text-5xl font-bold -mt-4 relative z-10 uppercase leading-none flex overflow-hidden">
+          {developerText.map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </h2>
+      </motion.div>
+
+      {/* باقي العناصر كما هي بدون تغيير */}
       <div className="absolute z-10 top-1/2 -translate-y-1/2 start-4 lg:bottom-22 lg:top-auto lg:translate-y-0 flex flex-col gap-4">
         {contactInfoList.map((info) => (
           <a
@@ -45,7 +120,7 @@ const Home = () => {
       </div>
 
       <a
-        href="/resume.pdf"
+        href={CV}
         target="_blank"
         rel="noopener noreferrer"
         className="absolute z-10 top-1/2 -translate-y-1/2 -end-6 -rotate-90 lg:bottom-18 lg:top-auto lg:translate-x-0 lg:rotate-0 lg:end-4
@@ -56,13 +131,21 @@ const Home = () => {
       </a>
 
       <div className="w-full lg:w-2/3 h-3/5 lg:h-4/5 relative">
-        <img
+        <motion.img
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
           src={ProfileImg}
           alt="Walid Mostafa"
           className="w-full h-full object-contain object-bottom"
         />
 
-        <div className="blur_circle w-[80%] md:w-[50%] lg:w-[60%] bottom-10 lg:-bottom-10 left-1/2 -translate-x-1/2" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration:1, ease: "easeOut", delay: 0.4 }}
+          className="blur_circle h-[55%] md:h-[60%] lg:h-[80%] bottom-10 lg:-bottom-10 left-1/2 -translate-x-1/2"
+        />
       </div>
 
       <div

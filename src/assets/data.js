@@ -10,11 +10,76 @@ import {
 
 // project data
 export const ProjectsData = [
-  // {
-  //   title: "My Portfolio",
-  //   img: myPortfolioI
-  //   demo: "https://walid-portfolio-2001.netlify.app/",
-  // },
+  {
+    title: "Alfoursan",
+    img: "/projects-images/alfoursan-peoject.png",
+    demo: "http://alfursanerp.technomasrsystems.com/",
+  },
+  {
+    title: "Form",
+    img: "/projects-images/Form-project.png",
+    demo: "https://form-web.technomasrsystems.com/",
+  },
+  {
+    title: "Industrial Agora",
+    img: "/projects-images/agora-project.png",
+    demo: "https://indusagora.com/",
+  },
+  {
+    title: "Oxyla",
+    img: "/projects-images/oxyla-project.png",
+    demo: "https://oxyla.sa/",
+  },
+  {
+    title: "Life Media",
+    img: "/projects-images/life-media-project.png",
+    demo: "http://www.lifemediaeg.com/",
+  },
+  {
+    title: "Techno Web Masr",
+    img: "/projects-images/twm-project.png",
+    demo: "https://technomasr.com/",
+  },
+  {
+    title: "KMG",
+    img: "/projects-images/kmg-project.png",
+    demo: "",
+  },
+  {
+    title: "Almoaeed",
+    img: "/projects-images/almoaeed-project.png",
+    demo: "",
+  },
+  {
+    title: "Tabshor",
+    img: "/projects-images/tabshor-project.png",
+    demo: "",
+  },
+  {
+    title: "Travixe",
+    img: "/projects-images/travixe-project.png",
+    demo: "",
+  },
+  {
+    title: "Drug Flow",
+    img: "/projects-images/drug-flow-project.png",
+    demo: "",
+  },
+  {
+    title: "Invistra Academy",
+    img: "/projects-images/invistra-academy-project.png",
+    demo: "",
+  },
+  {
+    title: "Kinetiq",
+    img: "/projects-images/kinetiq-project.png",
+    demo: "",
+  },
+  {
+    title: "My Portfolio",
+    img: "/projects-images/portfolio-project.png",
+    demo: "https://walid-portfolio-2001.netlify.app/",
+  },
   {
     title: "E-commerce",
     img: "/projectsImgs/ecom.webp",
@@ -128,15 +193,15 @@ export const skillsCategories = [
       },
       {
         id: 8,
-        name: "Framer Motion",
+        name: "React Query",
         image:
-          "https://framerusercontent.com/images/8Y1K4N6W6VDDT4KXGZ6YQPUF6A.png",
+          "https://miro.medium.com/v2/resize:fit:400/format:webp/1*adzk1E9QosIC2p-H6eCKvQ.jpeg",
       },
     ],
   },
   {
     id: 3,
-    title: "Styling",
+    title: "Styling & Animation",
     skills: [
       {
         id: 9,
@@ -148,7 +213,7 @@ export const skillsCategories = [
         id: 10,
         name: "Tailwind",
         image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
       {
         id: 11,
@@ -156,26 +221,44 @@ export const skillsCategories = [
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
       },
+      {
+        id: 12,
+        name: "Framer Motion",
+        image:
+          "https://www.ejable.com/wp-content/uploads/2022/04/Framer-Motion.webp",
+      },
+      {
+        id: 13,
+        name: "GSAP",
+        image:
+          "https://gsap.com/community/uploads/monthly_2020_03/tweenmax.png.cf27916e926fbb328ff214f66b4c8429.png",
+      },
     ],
   },
   {
     id: 4,
-    title: "Tools & Others",
+    title: "Tools & 3D Tech",
     skills: [
       {
-        id: 12,
+        id: 14,
+        name: "Three.js",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
+      },
+      {
+        id: 15,
         name: "Git",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       },
       {
-        id: 13,
+        id: 16,
         name: "GitHub",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
-        id: 14,
+        id: 17,
         name: "Responsive Design",
         image: "https://cdn-icons-png.flaticon.com/512/1006/1006554.png",
       },
