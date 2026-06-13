@@ -34,7 +34,7 @@ const Projects = () => {
           [&_.swiper-pagination-bullet-active]:bg-primary! [&_.swiper-pagination-bullet-active]:w-6! [&_.swiper-pagination-bullet-active]:h-5 [&_.swiper-pagination-bullet-active]:opacity-100! [&_.swiper-pagination-bullet-active]:opacity-100!"
         >
           {ProjectsData.map((project, index) => (
-            <SwiperSlide key={project.id} className="h-auto py-2">
+            <SwiperSlide key={project.title} className="h-auto py-2">
               <div className="backdrop-blur-3xl group flex flex-col justify-between gap-5 p-6 rounded-3xl bg-white dark:bg-neutral-900 border-2 border-gray-150 dark:border-neutral-800/70 shadow-primary/20 shadow-xs relative overflow-hidden h-full transition-all duration-300 hover:border-primary/30! hover:shadow-md">
                 <div className="blur_circle w-[60%] h-[60%] absolute bottom-1/2 end-1/2 bg-primary/10 blur-3xl rounded-full pointer-events-none group-hover:scale-150 group-hover:bg-primary/10 transition-all duration-500" />
 
@@ -44,14 +44,16 @@ const Projects = () => {
                       {index + 1 < 10 ? `0${index + 1}` : `${index + 1}`}
                     </span>
 
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full flex items-center justify-center border-2 border-foreground hover:text-white hover:bg-primary hover:border-primary hover:-rotate-45 transition-all duration-300 shadow-2xs"
-                    >
-                      <MoveRight className="w-5 h-5" />
-                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-11 h-11 rounded-full flex items-center justify-center border-2 border-foreground hover:text-white hover:bg-primary hover:border-primary hover:-rotate-45 transition-all duration-300 shadow-2xs"
+                      >
+                        <MoveRight className="w-5 h-5" />
+                      </a>
+                    )}
                   </div>
 
                   <div className="w-full h-48 overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-950 border border-gray-100 dark:border-neutral-850 relative">

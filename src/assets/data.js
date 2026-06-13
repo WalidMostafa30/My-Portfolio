@@ -1,16 +1,3 @@
-// project images
-import MiniStoreImg from "@/assets/images/projectsImgs/ecom.webp";
-import GuessGameImg from "@/assets/images/projectsImgs/guess-game.webp";
-import QuranImg from "@/assets/images/projectsImgs/quran-app.webp";
-import todoListimg from "@/assets/images/projectsImgs/todo-list.webp";
-import weatherimg from "@/assets/images/projectsImgs/weather-app.webp";
-import quizimg from "@/assets/images/projectsImgs/quiz-app.webp";
-import DragTodoImg from "@/assets/images/projectsImgs/drag-drop-todo.webp";
-import ageCalculatorImg from "@/assets/images/projectsImgs/age-calculator.webp";
-import ticTacToeImg from "@/assets/images/projectsImgs/tic-tac-toe.webp";
-import calculatorImg from "@/assets/images/projectsImgs/calculator.webp";
-import memoryGameImg from "@/assets/images/projectsImgs/memoryGame.webp";
-
 // contact icons
 import {
   Mail,
@@ -24,87 +11,63 @@ import {
 // project data
 export const ProjectsData = [
   // {
-  //   id: 1,
   //   title: "My Portfolio",
-  //   img: myPortfolioImg,
-  //   github: "https://github.com/WalidMostafa30/Walid-Portfolio",
+  //   img: myPortfolioI
   //   demo: "https://walid-portfolio-2001.netlify.app/",
   // },
   {
-    id: 2,
     title: "E-commerce",
-    img: MiniStoreImg,
-    github: "https://github.com/WalidMostafa30/E-commerce-jsonserver",
+    img: "/projectsImgs/ecom.webp",
     demo: "https://ecommerce-ministore.netlify.app/",
   },
   {
-    id: 3,
     title: "Quran App",
-    img: QuranImg,
-    github: "https://github.com/WalidMostafa30/Quran-App",
+    img: "/projectsImgs/quran-app.webp",
     demo: "https://al-mostafa-app.vercel.app/",
   },
   {
-    id: 4,
     title: "Todo List",
-    img: todoListimg,
-    github: "https://github.com/WalidMostafa30/Todo-List",
+    img: "/projectsImgs/todo-list.webp",
     demo: "https://todo-list-2o01.netlify.app/",
   },
   {
-    id: 5,
     title: "Weather App",
-    img: weatherimg,
-    github: "https://github.com/WalidMostafa30/Weather-App",
+    img: "/projectsImgs/weather-app.webp",
     demo: "https://weather-app-2o24.netlify.app/",
   },
   {
-    id: 6,
     title: "Draggable To-DO",
-    img: DragTodoImg,
-    github: "https://github.com/WalidMostafa30/Drag_Drop_Todo",
+    img: "/projectsImgs/drag-drop-todo.webp",
     demo: "https://drag-drop-todo-2001.netlify.app/",
   },
   {
-    id: 7,
     title: "Quiz App",
-    img: quizimg,
-    github: "https://github.com/WalidMostafa30/Quiz-App",
+    img: "/projectsImgs/quiz-app.webp",
     demo: "https://quiz-app-1022.netlify.app/",
   },
   {
-    id: 8,
     title: "Tic-Tac-Toe",
-    img: ticTacToeImg,
-    github: "https://github.com/WalidMostafa30/tic-tac-toe",
+    img: "/projectsImgs/tic-tac-toe.webp",
     demo: "https://walidmostafa30.github.io/tic-tac-toe/",
   },
   {
-    id: 9,
     title: "Guess Game",
-    img: GuessGameImg,
-    github: "https://github.com/WalidMostafa30/Guess-Game",
+    img: "/projectsImgs/guess-game.webp",
     demo: "https://walidmostafa30.github.io/Guess-Game/",
   },
   {
-    id: 10,
     title: "Age Calculator",
-    img: ageCalculatorImg,
-    github: "https://github.com/WalidMostafa30/Age-calculation",
+    img: "/projectsImgs/age-calculator.webp",
     demo: "https://walidmostafa30.github.io/Age-calculation/",
   },
   {
-    id: 11,
     title: "Calculator",
-    img: calculatorImg,
-    github: "https://github.com/WalidMostafa30/Calculator",
+    img: "/projectsImgs/calculator.webp",
     demo: "https://walidmostafa30.github.io/Calculator/",
   },
   {
-    id: 12,
     title: "Memory Game",
-    img: memoryGameImg,
-    github: "https://github.com/WalidMostafa30/Memory-game",
+    img: "/projectsImgs/memoryGame.webp",
     demo: "https://walidmostafa30.github.io/Memory-game/",
   },
 ];
