@@ -1,5 +1,4 @@
 // project images
-import myPortfolioImg from "@/assets/images/projectsImgs/portfolio.webp";
 import MiniStoreImg from "@/assets/images/projectsImgs/ecom.webp";
 import GuessGameImg from "@/assets/images/projectsImgs/guess-game.webp";
 import QuranImg from "@/assets/images/projectsImgs/quran-app.webp";
@@ -24,13 +23,13 @@ import {
 
 // project data
 export const ProjectsData = [
-  {
-    id: 1,
-    title: "My Portfolio",
-    img: myPortfolioImg,
-    github: "https://github.com/WalidMostafa30/Walid-Portfolio",
-    demo: "https://walid-portfolio-2001.netlify.app/",
-  },
+  // {
+  //   id: 1,
+  //   title: "My Portfolio",
+  //   img: myPortfolioImg,
+  //   github: "https://github.com/WalidMostafa30/Walid-Portfolio",
+  //   demo: "https://walid-portfolio-2001.netlify.app/",
+  // },
   {
     id: 2,
     title: "E-commerce",
