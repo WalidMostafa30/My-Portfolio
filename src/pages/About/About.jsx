@@ -1,6 +1,14 @@
 import PageTitle from "@/components/common/PageTitle";
-// استيراد الأيقونات من مكتبة lucide-react
-import { User, Cake, MapPin, GraduationCap, FileText } from "lucide-react";
+import CV from "@/assets/CV/Walid-Frontend Developer.pdf";
+import {
+  User,
+  Cake,
+  MapPin,
+  GraduationCap,
+  FileText,
+  DownloadCloud,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const aboutInfo = [
@@ -74,6 +82,18 @@ const About = () => {
               elements and comprehensive Right-to-Left (RTL) localization for
               Arabic platforms.
             </p>
+
+            <a
+              href={CV}
+              download
+              rel="noopener noreferrer"
+              className="mt-4 inline-block"
+            >
+              <Button>
+                Download Resume
+                <DownloadCloud size={16} />
+              </Button>
+            </a>
           </div>
 
           {/* كارت التعليم الداكن */}
@@ -91,9 +111,7 @@ const About = () => {
               <h4 className="text-sm md:text-md font-bold tracking-wide text-gray-100">
                 BACHELOR'S DEGREE IN COMPUTER SCIENCE
               </h4>
-              <p className="text-xs text-gray-400 font-mono">
-                Mansoura University
-              </p>
+              <p className="text-gray-400 font-mono">Mansoura University</p>
             </div>
 
             <div className="mt-6 pt-4 border-t border-neutral-800 text-xs text-myPurple font-semibold flex justify-between items-center">

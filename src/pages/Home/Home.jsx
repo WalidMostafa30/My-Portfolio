@@ -1,7 +1,7 @@
 import { contactInfoList } from "@/assets/data";
-import ProfileImg from "../../assets/Images/home-img.png";
+import ProfileImg from "@/assets/Images/home-img.png";
 import { FileText } from "lucide-react";
-import CV from "../../assets/CV/Walid-Frontend Developer.pdf";
+import CV from "@/assets/CV/Walid-Frontend Developer.pdf";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -121,7 +121,7 @@ const Home = () => {
 
       <a
         href={CV}
-        target="_blank"
+        download
         rel="noopener noreferrer"
         className="absolute z-10 top-1/2 -translate-y-1/2 -end-6 -rotate-90 lg:bottom-18 lg:top-auto lg:translate-x-0 lg:rotate-0 lg:end-4
         flex items-center gap-1 font-bold text-lg lg:text-xl uppercase hover:text-primary transition-colors"

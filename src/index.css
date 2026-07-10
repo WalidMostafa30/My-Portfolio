@@ -163,10 +163,6 @@
     @apply flex-1 container pt-16 pb-8 relative z-20;
   }
 
-  .card_bg {
-    @apply overflow-hidden rounded-4xl p-8 bg-gray-100/10 backdrop-blur-3xl relative border;
-  }
-
   .blur_circle {
     @apply absolute -z-10 aspect-square blur-2xl animate-spin;
 

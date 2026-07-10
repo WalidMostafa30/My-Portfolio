@@ -16,6 +16,11 @@ export const ProjectsData = [
     demo: "http://alfursanerp.technomasrsystems.com/",
   },
   {
+    title: "Invistra Academy",
+    img: "/projects-images/invistra-academy-project.png",
+    demo: "https://invistra.net/",
+  },
+  {
     title: "Form",
     img: "/projects-images/Form-project.png",
     demo: "https://form-web.technomasrsystems.com/",
@@ -63,12 +68,7 @@ export const ProjectsData = [
   {
     title: "Drug Flow",
     img: "/projects-images/drug-flow-project.png",
-    demo: "",
-  },
-  {
-    title: "Invistra Academy",
-    img: "/projects-images/invistra-academy-project.png",
-    demo: "",
+    demo: "https://drugflow.technomasrsystems.com/ar",
   },
   {
     title: "Kinetiq",
@@ -78,12 +78,12 @@ export const ProjectsData = [
   {
     title: "My Portfolio",
     img: "/projects-images/portfolio-project.png",
-    demo: "https://walid-portfolio-2001.netlify.app/",
+    demo: "https://my-portfolio-wklw.vercel.app/",
   },
   {
     title: "E-commerce",
     img: "/projectsImgs/ecom.webp",
-    demo: "https://ecommerce-ministore.netlify.app/",
+    demo: "https://e-commerce-alpha-two-91.vercel.app/",
   },
   {
     title: "Quran App",
@@ -93,22 +93,22 @@ export const ProjectsData = [
   {
     title: "Todo List",
     img: "/projectsImgs/todo-list.webp",
-    demo: "https://todo-list-2o01.netlify.app/",
+    demo: "https://todo-list-eta-five-38.vercel.app/",
   },
   {
     title: "Weather App",
     img: "/projectsImgs/weather-app.webp",
-    demo: "https://weather-app-2o24.netlify.app/",
+    demo: "https://weather-app-kappa-six-75.vercel.app/",
   },
   {
     title: "Draggable To-DO",
     img: "/projectsImgs/drag-drop-todo.webp",
-    demo: "https://drag-drop-todo-2001.netlify.app/",
+    demo: "https://drag-drop-todo-nine.vercel.app/",
   },
   {
     title: "Quiz App",
     img: "/projectsImgs/quiz-app.webp",
-    demo: "https://quiz-app-1022.netlify.app/",
+    demo: "https://quiz-app-flame-nu-32.vercel.app/",
   },
   {
     title: "Tic-Tac-Toe",
