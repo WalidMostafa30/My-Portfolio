@@ -11,14 +11,14 @@ import {
 // project data
 export const ProjectsData = [
   {
-    title: "Alfoursan",
-    img: "/projects-images/alfoursan-peoject.png",
-    demo: "http://alfursanerp.technomasrsystems.com/",
-  },
-  {
     title: "Invistra Academy",
     img: "/projects-images/invistra-academy-project.png",
     demo: "https://invistra.net/",
+  },
+  {
+    title: "Alfoursan Map",
+    img: "/projects-images/alfoursan-peoject.png",
+    demo: "http://alfursanerp.technomasrsystems.com/",
   },
   {
     title: "Form",
@@ -48,27 +48,27 @@ export const ProjectsData = [
   {
     title: "KMG",
     img: "/projects-images/kmg-project.png",
-    demo: "",
+    demo: "https://kmg-gg.com/",
   },
   {
     title: "Almoaeed",
     img: "/projects-images/almoaeed-project.png",
-    demo: "",
+    demo: "https://www.almoyaedgroup.com/",
   },
   {
     title: "Tabshor",
     img: "/projects-images/tabshor-project.png",
-    demo: "",
-  },
-  {
-    title: "Travixe",
-    img: "/projects-images/travixe-project.png",
-    demo: "",
+    demo: "https://tabshor.com/",
   },
   {
     title: "Drug Flow",
     img: "/projects-images/drug-flow-project.png",
     demo: "https://drugflow.technomasrsystems.com/ar",
+  },
+  {
+    title: "Travixe",
+    img: "/projects-images/travixe-project.png",
+    demo: "",
   },
   {
     title: "Kinetiq",

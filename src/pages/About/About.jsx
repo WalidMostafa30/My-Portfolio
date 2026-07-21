@@ -60,7 +60,7 @@ const About = () => {
           {/* كارت الـ Summary الكبير */}
           <div className="lg:col-span-2 bg-white dark:bg-neutral-900 border border-gray-150 dark:border-neutral-800 p-8 rounded-2xl relative overflow-hidden group shadow-xs">
             {/* خط جمالي علوي بلون الهوية */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-myBlue via-myPurple to-myGreen" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-myBlue via-myPurple to-myGreen" />
 
             <div className="flex items-center gap-2 mb-4">
               <FileText className="w-5 h-5 text-primary" />
@@ -97,7 +97,7 @@ const About = () => {
           </div>
 
           {/* كارت التعليم الداكن */}
-          <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 text-white p-6 rounded-2xl flex flex-col justify-between border border-neutral-800 shadow-lg relative overflow-hidden">
+          <div className="bg-linear-to-br from-neutral-900 to-neutral-950 text-white p-6 rounded-2xl flex flex-col justify-between border border-neutral-800 shadow-lg relative overflow-hidden">
             <div className="flex justify-between items-start">
               <span className="text-xs font-mono px-2.5 py-1 rounded-md border border-myGreen/20">
                 Education
