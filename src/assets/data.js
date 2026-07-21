@@ -18,7 +18,7 @@ export const ProjectsData = [
   {
     title: "Alfoursan Map",
     img: "/projects-images/alfoursan-peoject.png",
-    demo: "http://alfursanerp.technomasrsystems.com/",
+    demo: "https://alfursantracking.com/login",
   },
   {
     title: "Form",
