@@ -68,7 +68,7 @@ export const ProjectsData = [
   {
     title: "Travixe",
     img: "/projects-images/travixe-project.png",
-    demo: "",
+    demo: "http://travixe-web.technomasrsystems.com/ar",
   },
   {
     title: "Kinetiq",
