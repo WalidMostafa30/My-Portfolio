@@ -6,7 +6,20 @@ import {
   Instagram,
   MessageCircle,
   Phone,
+  House,
+  BookUser,
+  ChartBarStacked,
+  Folders,
+  Send,
 } from "lucide-react";
+
+export const navLinks = [
+  { id: 1, name: "Home", path: "/", icon: House },
+  { id: 2, name: "About", path: "/about", icon: BookUser },
+  { id: 3, name: "Skills", path: "/skills", icon: ChartBarStacked },
+  { id: 4, name: "Projects", path: "/projects", icon: Folders },
+  { id: 5, name: "Contact", path: "/contact", icon: Send },
+];
 
 // project data
 export const ProjectsData = [
@@ -44,6 +57,11 @@ export const ProjectsData = [
     title: "Techno Web Masr",
     img: "/projects-images/twm-project.png",
     demo: "https://technomasr.com/",
+  },
+  {
+    title: "TWM Online Store",
+    img: "/projects-images/TWM-Online-store.png",
+    demo: "https://rwadsolutions.com/",
   },
   {
     title: "KMG",

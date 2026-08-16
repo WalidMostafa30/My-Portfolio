@@ -2,12 +2,10 @@ import { contactInfoList } from "@/assets/data";
 import ProfileImg from "@/assets/Images/home-img.png";
 import { FileText } from "lucide-react";
 import CV from "@/assets/CV/Walid-Frontend Developer.pdf";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Home = () => {
-  // تفكيك الكلمات إلى مصفوفات من الحروف
-  const firstName = "Walid".split("");
-  const lastName = "Mostafa".split("");
   const frontendText = "Frontend".split("");
   const developerText = "Developer".split("");
 
@@ -39,7 +37,7 @@ const Home = () => {
   };
 
   return (
-    <section className="pageContainer h-dvh max-h-[1000px] pb-0 flex flex-col justify-end items-center overflow-hidden">
+    <section className="pageContainer h-[calc(100dvh-56px)] lg:h-dvh max-h-[1000px] pb-0 flex flex-col justify-end items-center overflow-hidden">
       {/* 1. أنيميشن الاسم (Walid Mostafa) */}
       <motion.div
         variants={containerVariants}
@@ -61,7 +59,7 @@ const Home = () => {
         variants={containerVariants}
         initial="initial"
         animate="animate"
-        className="absolute z-10 bottom-12 top-auto lg:bottom-auto lg:top-1/4 end-1/2 lg:end-4 translate-x-1/2 lg:translate-x-0 select-none"
+        className="absolute z-10 bottom-6 top-auto lg:bottom-auto lg:top-1/4 end-1/2 lg:end-4 translate-x-1/2 lg:translate-x-0 select-none"
       >
         <p className="text-lg lg:text-xl font-bold text-primary">Creative</p>
 
@@ -100,7 +98,7 @@ const Home = () => {
       </motion.div>
 
       {/* باقي العناصر كما هي بدون تغيير */}
-      <div className="absolute z-10 top-1/2 -translate-y-1/2 start-4 lg:bottom-22 lg:top-auto lg:translate-y-0 flex flex-col gap-4">
+      <div className="absolute z-10 top-1/2 -translate-y-[calc(50%-56px)] start-4 lg:bottom-22 lg:top-auto lg:translate-y-0 flex flex-col gap-4">
         {contactInfoList.map((info) => (
           <a
             key={info.id}
@@ -123,7 +121,7 @@ const Home = () => {
         href={CV}
         download
         rel="noopener noreferrer"
-        className="absolute z-10 top-1/2 -translate-y-1/2 -end-6 -rotate-90 lg:bottom-18 lg:top-auto lg:translate-x-0 lg:rotate-0 lg:end-4
+        className="absolute z-10 top-1/2 -translate-y-[calc(50%-56px)] -end-6 -rotate-90 lg:bottom-18 lg:top-auto lg:-translate-y-1/2 lg:translate-x-0 lg:rotate-0 lg:end-4
         flex items-center gap-1 font-bold text-lg lg:text-xl uppercase hover:text-primary transition-colors"
       >
         Resume
@@ -143,7 +141,7 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration:1, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           className="blur_circle h-[55%] md:h-[60%] lg:h-[80%] bottom-10 lg:-bottom-10 left-1/2 -translate-x-1/2"
         />
       </div>

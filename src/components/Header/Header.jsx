@@ -1,29 +1,14 @@
-import {
-  BookUser,
-  ChartBarStacked,
-  Folders,
-  House,
-  Send,
-  TextAlignJustify,
-} from "lucide-react";
+import { TextAlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
-import { useState } from "react";
-
-import NavBar from "./NavBar";
 import SideBar from "./SideBar";
+// import { useState } from "react";
+
+import { Link } from "react-router";
+import NavBar from "./NavBar";
 import ThemeBtn from "./ThemeBtn";
 
 const Header = () => {
-  const [openSidebar, setOpenSidebar] = useState(false);
-
-  const navLinks = [
-    { id: 1, name: "Home", path: "/", icon: <House /> },
-    { id: 2, name: "About", path: "/about", icon: <BookUser /> },
-    { id: 3, name: "Skills", path: "/skills", icon: <ChartBarStacked /> },
-    { id: 4, name: "Projects", path: "/projects", icon: <Folders /> },
-    { id: 5, name: "Contact", path: "/contact", icon: <Send /> },
-  ];
+  // const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
     <>
@@ -36,28 +21,24 @@ const Header = () => {
             Walid
           </Link>
 
-          <NavBar navLinks={navLinks} />
+          <NavBar />
 
           <div className="flex items-center gap-4">
             <ThemeBtn />
 
-            <Button
+            {/* <Button
               variant="outline"
               size="icon"
-              className="rounded-full cursor-pointer md:hidden"
+              className="rounded-full cursor-pointer lg:hidden"
               onClick={() => setOpenSidebar(true)}
             >
               <TextAlignJustify />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </header>
 
-      <SideBar
-        open={openSidebar}
-        onClose={() => setOpenSidebar(false)}
-        navLinks={navLinks}
-      />
+      {/* <SideBar open={openSidebar} onClose={() => setOpenSidebar(false)} /> */}
     </>
   );
 };

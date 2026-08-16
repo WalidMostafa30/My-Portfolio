@@ -1,8 +1,10 @@
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { navLinks } from "@/assets/data";
 
 const overlayVariants = {
   hidden: {
@@ -58,7 +60,7 @@ const textVariants = {
   exit: { x: 30, opacity: 0 },
 };
 
-const SideBar = ({ navLinks, open, onClose }) => {
+const SideBar = ({ open, onClose }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const closeBtnRef = useRef(null);
@@ -143,7 +145,7 @@ const SideBar = ({ navLinks, open, onClose }) => {
                     onClick={() => handleLinkClick(link.path)}
                   >
                     <motion.span variants={iconVariants}>
-                      {link.icon}
+                      <link.icon />
                     </motion.span>
 
                     <motion.p variants={textVariants}>{link.name}</motion.p>
